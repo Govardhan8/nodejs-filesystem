@@ -1,0 +1,10 @@
+GITHUB URL: https://github.com/Govardhan8/nodejs-filesystem
+HEROKU URL: https://nodejs-filesystem-g.herokuapp.com
+
+TO CREATE FILE: 
+URL:https://nodejs-filesystem-g.herokuapp.com/createfile
+METHOD: POST
+
+TO GET ALL FILES: 
+URL:https://nodejs-filesystem-g.herokuapp.com/allfiles
+METHOD: GET
