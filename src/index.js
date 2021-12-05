@@ -35,14 +35,6 @@ app.get('/allfiles', (request, response) => {
 
 const getDateTime = () => {
 	const currentdate = new Date()
-	const datetime =
-		' ' +
-		currentdate.getDate() +
-		currentdate.getMonth() +
-		currentdate.getFullYear() +
-		'_' +
-		currentdate.getHours() +
-		currentdate.getMinutes() +
-		currentdate.getSeconds()
+	const datetime = `${currentdate.getDate()}${currentdate.getMonth()}${currentdate.getFullYear()}-${currentdate.getHours()}${currentdate.getMinutes()}${currentdate.getSeconds()}`
 	return datetime
 }
