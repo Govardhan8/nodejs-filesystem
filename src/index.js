@@ -1,5 +1,4 @@
 import express from 'express'
-import { MongoClient } from 'mongodb'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import fs from 'fs'
@@ -15,12 +14,13 @@ app.listen(PORT, () => {
 })
 
 //Initial check up
-app.get('/', function (req, res) {
+app.get('/', function (request, response) {
 	res.send({
 		message: 'App is up and running!!',
 	})
 })
 
+//To create files
 app.post('/createfile', (request, response) => {
 	const date = getDateTime()
 	fs.writeFile(`./textfiles/${date}.txt`, Date(), () => {
@@ -28,6 +28,7 @@ app.post('/createfile', (request, response) => {
 	})
 })
 
+//To retrieve all the files
 app.get('/allfiles', (request, response) => {
 	const filenames = fs.readdirSync('./textfiles/')
 	response.send(filenames)
